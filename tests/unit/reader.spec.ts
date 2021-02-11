@@ -12,7 +12,7 @@ import {
 } from "@/helpers/reader";
 import { expect } from "chai";
 import moment from "moment";
-import { CellObject, Sheet, utils } from "xlsx/types";
+import { CellObject, Sheet } from "xlsx/types";
 
 const sheet: Sheet = {
 	A1: { v: 1 } as CellObject,

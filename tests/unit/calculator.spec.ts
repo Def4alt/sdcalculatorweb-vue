@@ -4,24 +4,24 @@ import { StatModel } from "@/helpers/statistics";
 import { expect } from "chai";
 
 describe("Calculator", () => {
-	// it("Get Warning", () => {
-	// 	const model = {
-	// 		Average: [0, 0],
-	// 		SD: 1,
-	// 		Warnings: [" "]
-	// 	} as StatModel;
+	it("Get Warning", () => {
+		const model = {
+			Average: [0, 0],
+			SD: 1,
+			Warnings: [" "]
+		} as StatModel;
 
-	// 	let warning = getWarning(model);
-	// 	expect(warning).to.be.equal(" ");
+		let warning = getWarning(model);
+		expect(warning).to.be.equal(" ");
 
-	// 	model.Average = [0, 4];
-	// 	warning = getWarning(model);
-	// 	expect(warning).to.be.equal("13S");
+		model.Average = [0, 4];
+		warning = getWarning(model);
+		expect(warning).to.be.equal("13S");
 
-	// 	model.Average = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-	// 	warning = getWarning(model);
-	// 	expect(warning).to.be.equal("8X");
-	// });
+		model.Average = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+		warning = getWarning(model);
+		expect(warning).to.be.equal("8X");
+	});
 
 	it("Append Statistics Model", () => {
 		const model = {
@@ -40,7 +40,7 @@ describe("Calculator", () => {
 
 		expect(result.Average).to.have.length(2);
 		expect(result.SD).to.be.equal(5);
-		// expect(result.Warnings[1]).to.be.equal("13S");
+		expect(result.Warnings[1]).to.be.equal("13S");
 	});
 
 	it("Append New Models", () => {
@@ -65,6 +65,6 @@ describe("Calculator", () => {
 
 		expect(models).to.have.length(1);
 		expect(models[0].Average).to.have.length(2);
-		// expect(models[0].Warnings[1]).to.be.equal("13S");
+		expect(models[0].Warnings[1]).to.be.equal("13S");
 	});
 });
